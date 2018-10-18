@@ -7,9 +7,21 @@ const MainPage = props => {
         <h1>MyReads</h1>
       </div>
       <div className="list-books-content">
-        <BookShelf shelfTitle="Currently Reading" />
-        <BookShelf shelfTitle="Want To Read" />
-        <BookShelf shelfTitle="Read" />
+        <BookShelf
+          shelfTitle="Currently Reading"
+          updateShelf={props.updateShelf}
+          books={props.books.filter(book => book.shelf === "currentlyReading")}
+        />
+        <BookShelf
+          shelfTitle="Want To Read"
+          updateShelf={props.updateShelf}
+          books={props.books.filter(book => book.shelf === "wantToRead")}
+        />
+        <BookShelf
+          shelfTitle="Read"
+          updateShelf={props.updateShelf}
+          books={props.books.filter(book => book.shelf === "read")}
+        />
       </div>
     </div>
   );
