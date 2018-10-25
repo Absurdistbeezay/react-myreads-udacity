@@ -22,7 +22,7 @@ export class BookShelf extends Component {
                     <select
                       value={book.shelf}
                       onChange={e =>
-                        this.props.updateShelf(book.id, e.target.value)
+                        this.props.updateShelf(book, e.target.value)
                       }
                     >
                       <option value="none" disabled>
