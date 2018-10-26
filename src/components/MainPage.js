@@ -1,5 +1,6 @@
 import React from "react";
 import BookShelf from "./BookShelf";
+import { Link } from "react-router-dom";
 const MainPage = props => {
   return (
     <div className="list-books">
@@ -22,6 +23,9 @@ const MainPage = props => {
           updateShelf={props.updateShelf}
           books={props.books.filter(book => book.shelf === "read")}
         />
+      </div>
+      <div className="open-search">
+        <Link to="/search" />
       </div>
     </div>
   );
