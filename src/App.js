@@ -78,7 +78,7 @@ class BooksApp extends React.Component {
         }
         this.setState({
           books: myNewBooks,
-          searchedBooks: [newSearchedBooks, book]
+          searchedBooks: newSearchedBooks
         });
       });
     }
